@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{{ page.title }} - 方凳会Blog</title>
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link rel="alternate" href="/atom.xml" title="方凳会blog » Feed" type="application/rss+xml" />
+        <link rel="stylesheet" media="all" href="/static/i.css" />
+        <link rel="stylesheet" href="/static/pygments.css" />
+        <link rel="index" href="http://blog.fangdeng.org/" title="方凳会Blog" />
+    </head>
+    <body>
+        <div id="org-fangdeng-blog" class="article">
+            {% include post_header.html %}
+            <div id="container">
+                <div id="content">
+                    <div id="main" role="main">
+                        <article class="post">
+                            <header class="entry-header">
+                                <div class="entry-meta">
+                                    <time class="entry-date">{{ page.date | date: "%B %d, %Y" }}</time>
+                                </div>
+                            </header>
+                            <div class="entry-content">
+                                {{ content }}
+                            </div>
+                            <footer class="entry-meta">
+                                Bookmark the <a href="{{ site.baseurl }}{{ page.url }}" title="Permalink to {{ page.title }}" rel="bookmark">permalink</a>.		
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+                <div id="sidebar" class="widget-area" role="complementary">
+                    {% include widget/recently_posts_post.html %}
+                    {% assign category = page.categories[0] %}
+                    {% include widget/same_category_posts.html %}
+                    {% assign tag = page.tags[0] %}
+                    {% include widget/same_tag_posts.html %}
+                </div>
+            </div>
+            {% include footer.html %}
+        </div>
+    </body>
+</html>
