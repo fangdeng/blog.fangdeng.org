@@ -11,6 +11,7 @@ title: Edgar's Blog
             <time class="entry-date">{{ post.date | date: "%B %d, %Y" }}</time>
         </div>
         <h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="entry-author">by {{ post.author }}</div>
     </header>
     <div class="entry-content">
         {{ post.content }}
@@ -23,7 +24,7 @@ title: Edgar's Blog
 
 {% if site.posts.size > 1 %}
     {% for rpost in site.posts limit:5 offset:1 %}
-<article class="post recent-post">
+<article class="post recently-post">
     <div class="entry-header">
         <div class="entry-meta">
             <time class="entry-date">{{ rpost.date | date: "%B %d, %Y" }}</time>

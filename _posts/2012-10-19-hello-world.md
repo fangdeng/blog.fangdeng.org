@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello World!
+author: admin
 categories: [uncategorized]
 tags: [untagged]
 ---
