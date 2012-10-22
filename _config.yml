@@ -2,3 +2,4 @@ baseurl: http://blog.fangdeng.org
 auto: true
 pygments: true
 permalink: /article/:title.html
+feed: http://feeds.feedburner.com/fangdengblog
